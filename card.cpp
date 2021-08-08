@@ -10,21 +10,21 @@ void Card::Flip()
     m_IsFaceUp = !(m_IsFaceUp);
 }
 
-// Method GetValue returns the Card value
+// возвращает значение карты
 int Card::GetValue() const
 {
-    // if card is tirned face down, return 0
+    // если карта рубашкой вверх - 0
     int value = 0;
     if (m_IsFaceUp)
     {
-        // value is the Card value
+        // возврат значения
         value = m_Rank;
     }
 
     return value;
 }
 
-// Overload the << operator for sending Card object to cout
+// перегрузка оператора <<
 std::ostream& operator<< (std::ostream& os, const Card& aCard)
 {
     const std::string RANKS[] = { "0", "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
